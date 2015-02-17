@@ -2,8 +2,9 @@
 /*
  * 
  */
+namespace KS\HTTP;
 
-class HTTP{
+class HTTP {
   
   private $cookiePath = null;
   private $userAgent = 'Googlebot/2.1 (+http://www.google.com/bot.html)';

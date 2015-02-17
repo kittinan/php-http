@@ -1,0 +1,17 @@
+{
+  "name": "kittinan/php-http",
+  "description": "php-http is a simple HTTP class with php5-curl",
+  "license": "MIT",
+  "require": {
+    "php": ">=5"
+  },
+  "require-dev": {
+    "satooshi/php-coveralls": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "KS\\HTTP\\": "src/KS/HTTP"
+    }
+  }
+
+}

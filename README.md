@@ -6,23 +6,32 @@ php-http
 
 simple php http wrapper with php-curl
 
+Support :
+
+- GET, POST
+
+- Download File
+
 ## Requirement
 * PHP 5+
 * php5-curl
 
 ## Composer
+
+Install the latest version with composer require kittinan/php-http
+
 This plugin on the Packagist.
 
 [https://packagist.org/packages/kittinan/php-http](https://packagist.org/packages/kittinan/php-http)
 
-Install the latest version with composer require kittinan/php-http
+## Usage
+```php
 
-
-Support :
-
-- HTTP GET, POST
-
-- Download File
+$http = new \KS\HTTP\HTTP();
+$url = 'https://github.com/kittinan/php-http';
+$html = $http->get($url);
+echo $html;
+```
 
 
 License

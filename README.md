@@ -2,6 +2,8 @@ php-http
 ========
 [![Build Status](https://travis-ci.org/kittinan/php-http.svg?branch=master)](https://travis-ci.org/kittinan/php-http)
 [![Coverage Status](https://coveralls.io/repos/kittinan/php-http/badge.svg?branch=master)](https://coveralls.io/r/kittinan/php-http?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/kittinan/php-http/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/kittinan/php-http/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kittinan/php-http/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kittinan/php-http/?branch=master)
 [![License](https://poser.pugx.org/kittinan/php-http/license.svg)](https://packagist.org/packages/kittinan/php-http)
 
 simple php http wrapper with php-curl

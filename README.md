@@ -15,6 +15,8 @@ This plugin on the Packagist.
 
 [https://packagist.org/packages/kittinan/php-http](https://packagist.org/packages/kittinan/php-http)
 
+Install the latest version with composer require kittinan/php-http
+
 
 Support :
 

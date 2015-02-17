@@ -8,9 +8,9 @@ simple php http wrapper with php-curl
 
 Support :
 
-- GET, POST
-
+- HTTP Method GET, POST
 - Download File
+- Support Cookie with cookiejar file
 
 ## Requirement
 * PHP 5+
@@ -25,6 +25,7 @@ This plugin on the Packagist.
 [https://packagist.org/packages/kittinan/php-http](https://packagist.org/packages/kittinan/php-http)
 
 ## Usage
+*Example : HTTP GET*
 ```php
 $http = new \KS\HTTP\HTTP();
 $url = 'https://github.com/kittinan/php-http';

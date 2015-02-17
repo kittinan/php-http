@@ -26,7 +26,6 @@ This plugin on the Packagist.
 
 ## Usage
 ```php
-
 $http = new \KS\HTTP\HTTP();
 $url = 'https://github.com/kittinan/php-http';
 $html = $http->get($url);

@@ -19,4 +19,18 @@ class HTTPTest extends PHPUnit_Framework_TestCase {
       $this->assertRegExp('/kittinan/', $html);
   }
   
+  public function testPost() {
+      $url = 'http://posttestserver.com/post.php?dump&html&dir=php-http';
+      
+      $params = array(
+          'post_time' => time(),
+          'name' => 'kittinan',
+      );
+      
+      $html = $this->Http->post($url, $params);
+      
+      $this->assertRegExp('/'.$params['post_time'].'/', $html);
+      $this->assertRegExp('/'.$params['name'].'/', $html);
+  }
+  
 }

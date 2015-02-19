@@ -33,4 +33,16 @@ class HTTPTest extends PHPUnit_Framework_TestCase {
       $this->assertRegExp('/'.$params['name'].'/', $html);
   }
   
+  public function testDownload() {
+      $local_file_hash = sha1_file(__DIR__.'/../README.md');
+      
+      $url = 'https://raw.githubusercontent.com/kittinan/php-http/master/README.md';
+      $savePath = __DIR__ . '/test.txt';
+      $this->Http->download($url, $savePath);
+      
+      $download_file_hash = sha1_file($savePath);
+      unlink($savePath);
+      $this->assertEquals($local_file_hash, $download_file_hash);
+  }
+  
 }

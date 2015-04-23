@@ -68,6 +68,7 @@ class HTTP {
     $opts[CURLOPT_RETURNTRANSFER] = 1;
     $opts[CURLOPT_CONNECTTIMEOUT] = $this->timeout;
     $opts[CURLOPT_USERAGENT] = $this->userAgent;
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
     
     if(!empty($this->cookiePath)){
       $opts[CURLOPT_COOKIEFILE] = $this->cookiePath;

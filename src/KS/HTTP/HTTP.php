@@ -9,6 +9,7 @@ class HTTP {
   private $cookiePath = null;
   private $userAgent = 'Googlebot/2.1 (+http://www.google.com/bot.html)';
   private $timeout = 60;
+  private $headers = array();
   
   public function __construct($cookiePath = null) {
     if(!empty($cookiePath)) {
@@ -49,6 +50,10 @@ class HTTP {
       curl_setopt ($ch, CURLOPT_COOKIEJAR, $this->cookiePath);
     }
     
+    if(!empty($this->headers)) {
+      curl_setopt ($ch, CURLOPT_HTTPHEADER, $this->headers);
+    }
+    
     $content = curl_exec ($ch);
     curl_close ($ch);
     return $content;
@@ -73,6 +78,10 @@ class HTTP {
     if(!empty($this->cookiePath)){
       $opts[CURLOPT_COOKIEFILE] = $this->cookiePath;
       $opts[CURLOPT_COOKIEJAR] = $this->cookiePath;
+    }
+    
+    if(!empty($this->headers)) {
+      curl_setopt ($ch, CURLOPT_HTTPHEADER, $this->headers);
     }
     
     if($is_upload){
@@ -115,5 +124,12 @@ class HTTP {
     curl_close($ch);
   }
   
-
+  public function setHeaders($headers) {
+    $this->headers = $headers;
+  }
+  
+  public function getHeaders() {
+    return $this->headers;
+  }
+  
 } 

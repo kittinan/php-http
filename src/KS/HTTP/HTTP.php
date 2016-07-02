@@ -64,7 +64,12 @@ class HTTP {
    */
   public function post($url, $params = null, $is_upload = false) {
     if(!empty($params)){
-      $query = http_build_query($params);
+      if (is_array($params) == true) {
+        $query = http_build_query($params);
+      } else {
+        //Raw POST
+        $query = $params;
+      }
     }else{
       $query = '';
     }
